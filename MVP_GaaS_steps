@@ -1,0 +1,141 @@
+🌱 MVP do App de Governança - Banco Ubuntú
+👩‍💻 Tecnologias principais:
+Frontend: HTML + CSS + JS (ou React, se quiser escalar)
+
+Backend/API: Node.js ou Python Flask (para validações, persistência, e interações)
+
+Blockchain: Solidity para smart contracts + ferramenta de deploy (ex: Hardhat)
+
+Banco de dados: SQLite ou Firebase para MVP (dados temporários)
+
+Hospedagem: Vercel/Render/Netlify (front) + IPFS/Polygon Mumbai para testes blockchain
+
+✅ ETAPA 1 — Cadastro de Projetos (Formulário HTML)
+Objetivo: Permitir que qualquer pessoa crie um projeto com orçamento detalhado
+
+Campos:
+
+Nome do projeto
+
+Descrição do projeto
+
+Objetivos
+
+Orçamento dividido por partes (dropdown dinâmico):
+
+Item
+
+Valor
+
+Justificativa
+
+Mão de obra:
+
+Horas voluntárias (comunitárias)
+
+Serviços especializados (com custo)
+
+Cronograma (opcional)
+
+Recompensas simbólicas (opcional)
+
+💡 Dica: Use JS para permitir adicionar/remover campos dinamicamente
+
+✅ ETAPA 2 — Cadastro de Participantes da Comunidade
+Objetivo: Registrar membros que poderão votar ou contribuir
+
+Campos:
+
+Nome
+
+E-mail
+
+Chave Pix (ou carteira Ethereum se quiser ir além)
+
+Interesse: (X) Quero votar (X) Quero contribuir (X) Ambos
+
+💡 Privacidade: Deixe claro como os dados serão protegidos.
+
+✅ ETAPA 3 — Cadastro de Regras da Comunidade
+Objetivo: Organizador define como será a governança
+
+Campos:
+
+Tipo de voto:
+
+( ) 1 pessoa = 1 voto
+
+( ) Voto proporcional à contribuição
+
+Condições de aprovação (ex: maioria simples, 2/3, unanimidade)
+
+Condições de cancelamento
+
+Pessoa ou função responsável por validar comprovantes
+
+💡 Linkar depois essas regras ao projeto correspondente
+
+✅ ETAPA 4 — Página de Votação
+Objetivo: Comunidade sugere e vota nos projetos
+
+Funcionalidades:
+
+Ver todos os projetos ativos
+
+Sugerir modificações ou novas ideias (campo aberto)
+
+Votação:
+
+Votar "sim/não" no projeto completo
+
+Votar em cada parte do orçamento separadamente
+
+Cancelar ou apoiar cancelamento
+
+💡 Pode usar uma tabela simples com inputs de voto e status
+
+✅ ETAPA 5 — Geração Automática do Smart Contract (Solidity)
+Objetivo: Criar um contrato seguro para controlar os recursos
+
+Lógica do contrato:
+
+Armazena os dados do projeto e orçamentos
+
+Armazena regras de votação e cancelamento
+
+Permite depósitos dos participantes
+
+Liberação dos fundos ocorre se:
+
+A meta for atingida E comprovantes forem enviados e validados
+
+Reembolso automático se:
+
+A meta não for atingida
+
+O projeto for cancelado pela maioria (definido na regra)
+
+💡 Use enum para estados do projeto (Pending, Active, Cancelled, Funded, etc.)
+
+✅ ETAPA 6 — Verificação e Validação de Comprovantes
+Papel do validador:
+
+Interface para upload de comprovantes
+
+Verificação visual (pode ser manual no MVP)
+
+Confirmação que libera o fundo correspondente via smart contract
+
+✅ ETAPA 7 — Testes e Deploy
+Use Remix ou Hardhat para testar contratos
+
+Deploy em Mumbai Testnet (Polygon) para MVP
+
+Hospede o frontend em Netlify ou Vercel
+
+✅ ETAPA 8 — Iteração com Feedback
+Coloque o MVP nas mãos de 1 ou 2 comunidades reais
+
+Veja o que funciona ou não
+
+Itere, simplifique ou automatize onde necessário
